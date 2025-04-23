@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cascade Scoreboard MCP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <div class="scoreboard">
+      <h2>Cascade Scoreboard MCP</h2>
+      <div class="score-row">
+        <span>Score:</span> <span id="score">0</span>
+        <button id="add-point">+1</button>
+      </div>
+      <div class="section">
+        <h3>Tasks</h3>
+        <ul id="tasks"></ul>
+        <input id="task-input" placeholder="New task..." maxlength="40" />
+        <button id="add-task">Add Task</button>
+      </div>
+      <div class="section">
+        <h3>File Queue</h3>
+        <ul id="files"></ul>
+        <input id="file-input" placeholder="Add file path..." />
+        <button id="add-file">Add File</button>
+      </div>
+      <div class="section">
+        <h3>Current File</h3>
+        <span id="current-file"></span>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
