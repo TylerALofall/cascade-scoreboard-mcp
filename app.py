@@ -72,6 +72,8 @@ def files():
 @app.route('/api/telephone/start', methods=['POST'])
 def telephone_start():
     data = request.json
+    if data is None:
+        return jsonify(error="Invalid JSON body"), 400
     message = data.get("message", "")
     telephone_game["original_message"] = message
     telephone_game["current_message"] = message
@@ -81,6 +83,8 @@ def telephone_start():
 @app.route('/api/telephone/relay', methods=['POST'])
 def telephone_relay():
     data = request.json
+    if data is None:
+        return jsonify(error="Invalid JSON body"), 400
     new_message = data.get("message", "")
     # Append the previous current_message to history
     telephone_game["history"].append(telephone_game["current_message"])
